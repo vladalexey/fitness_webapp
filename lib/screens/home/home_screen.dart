@@ -15,8 +15,11 @@ class HomeScreen extends StatelessWidget {
           image: DecorationImage(
               image: AssetImage("assets/images/bg2.png"), fit: BoxFit.cover),
         ),
-        child: Column(
-          children: <Widget>[CustomAppBar(), Body()],
+        child: Stack(
+          children: <Widget>[
+            Positioned(top: 0.0, right: 0.0, child: CustomAppBar()),
+            Positioned(top: 100.0, child: Body())
+          ],
         ),
       ),
     );
